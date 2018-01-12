@@ -1,0 +1,1 @@
+worker: python cprice_alert.py
