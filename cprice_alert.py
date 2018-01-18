@@ -37,7 +37,7 @@ def set_rate(bot, update, args, job_queue, chat_data):
 
         # Add job to queue
         context = {'chat_id': chat_id, 'tracking_rate': rate}
-        job = job_queue.run_repeating(send_rate_notification, 5, context=context)
+        job = job_queue.run_repeating(send_rate_notification, 300, context=context)
         chat_data['job'] = (rate, job)
 
         update.message.reply_text('Exchange rate now tracking!')
